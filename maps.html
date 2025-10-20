@@ -22,4 +22,20 @@
     <h1>Basic Maps</h1>
     <div id = "map"></div>
 </body>
+<script>
+
+var map = L.map('map').setView([8.360158214136012, 124.86838194536021], 17);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var marker = L.marker([8.360158214136012, 124.86838194536021]).addTo(map);
+const wanted = "<img src= 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fverafiles.org%2Farticles%2Fsarah-discaya-confidently-anomalous&psig=AOvVaw1ervBNmanAF9DKvZ-oZ3VX&ust=1761005655695000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNi-0bi_sZADFQAAAAAdAAAAABAE' class='popup-image'>";
+const popupContent = '${discaya}<br><b>SARAH DISCAYA</b><br>A corrupt official.';
+
+marker.bindPopup(popupContent).openPopup();
+
+</script>
 </html>
